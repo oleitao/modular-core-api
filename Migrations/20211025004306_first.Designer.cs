@@ -28,6 +28,18 @@ namespace ModularCoreApi.Migrations
 
                     b.ToTable("Touchs");
                 });
+
+            modelBuilder.Entity("ModularCoreApi.Models.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("Guid");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users");
+                });
+
 #pragma warning restore 612, 618
         }
     }
