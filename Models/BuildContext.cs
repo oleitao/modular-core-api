@@ -4,7 +4,7 @@ using System.Configuration;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 
-namespace DockerAPIEntity.Models
+namespace ModularCoreApi.Models
 {
     public class BuildContext : DbContext
     {

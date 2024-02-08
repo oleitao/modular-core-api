@@ -6,7 +6,7 @@
     <ProjectGuid>ad0c736e-7586-4bae-ba8b-727be6d8c48a</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/swagger</DockerServiceUrl>
-    <DockerServiceName>dockerapientity</DockerServiceName>
+    <DockerServiceName>modularcoreapi</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
     <None Include="docker-compose.override.yml">

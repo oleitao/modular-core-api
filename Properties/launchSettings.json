@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "DockerAPIEntity": {
+    "ModularCoreApi": {
       "commandName": "Docker",
       "launchUrl": "swagger",
       "environmentVariables": {

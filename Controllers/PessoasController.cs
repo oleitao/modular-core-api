@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
-using DockerAPIEntity.Models;
+using ModularCoreApi.Models;
 
-namespace DockerAPIEntity.Controllers
+namespace ModularCoreApi.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]

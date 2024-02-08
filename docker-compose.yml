@@ -31,8 +31,8 @@ services:
      - project_network
 
 
-  dockerapientity:
-    image: ${DOCKER_REGISTRY-}dockerapientity
+  modularcoreapi:
+    image: ${DOCKER_REGISTRY-}modularcoreapi
     container_name: project_container
     # restart: on-failure
     volumes:
