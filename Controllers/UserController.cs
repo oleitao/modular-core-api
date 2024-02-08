@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -11,26 +11,22 @@ namespace ModularCoreApi.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class PessoasController : ControllerBase
+    public class UserController : ControllerBase
     {
         private readonly BuildContext _context;
 
-        private readonly ILogger<PessoasController> _logger;
+        private readonly ILogger<UserController> _logger;
 
-        public PessoasController(BuildContext context, ILogger<PessoasController> logger) {
+        public UserController(BuildContext context, ILogger<UserController> logger) {
 
             _logger = logger;
             _context = context;
         }
 
         [HttpGet]
-        public async Task<List<Pessoa>> Get()
+        public async Task<List<User>> Get()
         {
-            return await _context.Pessoas.ToListAsync();
+            return await _context.Users.ToListAsync();
         }
-
-        
-       
-
     }
 }

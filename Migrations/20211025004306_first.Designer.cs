@@ -18,15 +18,15 @@ namespace ModularCoreApi.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 64)
                 .HasAnnotation("ProductVersion", "5.0.11");
 
-            modelBuilder.Entity("ModularCoreApi.Models.Pessoa", b =>
+            modelBuilder.Entity("ModularCoreApi.Models.Touch", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("Guid");
 
-                    b.HasKey("id");
+                    b.HasKey("Id");
 
-                    b.ToTable("Pessoas");
+                    b.ToTable("Touchs");
                 });
 #pragma warning restore 612, 618
         }

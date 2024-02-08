@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace ModularCoreApi.Models
 {
@@ -11,7 +7,8 @@ namespace ModularCoreApi.Models
 
         public BuildContext(DbContextOptions<BuildContext> options): base(options){ }
 
-        public DbSet<Pessoa> Pessoas { get; set; }
+        public DbSet<Touch> Touchs { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 
 }
