@@ -1,0 +1,49 @@
+<section class="user-page">
+  <div class="container">
+    <div class="user--card">
+      <h2 class="user-head">{{head}}</h2>
+      <p class="user-title">{{title}}</p>
+      <form class="user-form" [formGroup]="signupForm"  (ngSubmit)="onSubmit()" method="post">
+        <div class="user-group">
+            <input type="text" formControlName="firstName" class="user-control" placeholder="First Name">
+            <div *ngIf="signupForm.get('firstName')?.invalid && signupForm.get('firstName')?.touched">
+              <div *ngIf="signupForm.get('firstName')?.errors?.['required']">Email is required</div>
+              <div *ngIf="signupForm.get('firstName')?.errors?.['firstName']">Invalid email format</div>
+            </div>
+        </div>
+        <div class="user-group">
+            <input type="text" formControlName="lastName" class="user-control" placeholder="Last Name">
+            <div *ngIf="signupForm.get('lastName')?.invalid && signupForm.get('lastName')?.touched">
+              <div *ngIf="signupForm.get('lastName')?.errors?.['required']">Email is required</div>
+              <div *ngIf="signupForm.get('lastName')?.errors?.['lastName']">Invalid email format</div>
+            </div>
+        </div>
+        <div class="user-group">
+          <input type="email" formControlName="email" class="user-control" placeholder="Email">
+          <div *ngIf="signupForm.get('email')?.invalid && signupForm.get('email')?.touched">
+            <div *ngIf="signupForm.get('email')?.errors?.['required']">Email is required</div>
+            <div *ngIf="signupForm.get('email')?.errors?.['email']">Invalid email format</div>
+          </div>
+        </div>
+        <div class="user-group">
+          <input type="password" formControlName="password" class="user-control" placeholder="Password">
+          <div *ngIf="signupForm.get('password')?.invalid && signupForm.get('password')?.touched">
+            <div *ngIf="signupForm.get('password')?.errors?.['required']">Password is required</div>
+            <div *ngIf="signupForm.get('password')?.errors">Password must be between 5 to 8</div>
+          </div>
+        </div>
+        <div class="user-group">
+          <div *ngIf="ValidationErrors != ''">{{ValidationErrors}}</div>
+        </div>
+        <div class="user-button">
+          <button type="submit" [disabled]="signupForm.invalid" class="button">Signup</button>
+        </div>
+      </form>
+      <div class="line-divider"></div>
+      <div class="user-button" style="margin-top: 20px;">
+        <a routerLink="/" class="button">Login</a>
+        <p class="user-text">Already have an account?</p>
+      </div>
+    </div>
+  </div>
+</section>
