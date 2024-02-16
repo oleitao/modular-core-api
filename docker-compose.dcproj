@@ -3,10 +3,10 @@
   <PropertyGroup Label="Globals">
     <ProjectVersion>2.1</ProjectVersion>
     <DockerTargetOS>Linux</DockerTargetOS>
-    <ProjectGuid>ad0c736e-7586-4bae-ba8b-727be6d8c48a</ProjectGuid>
+    <ProjectGuid>6cbdebf0-dc21-41c9-a1d4-8b7fa885b26e</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/swagger</DockerServiceUrl>
-    <DockerServiceName>modularcoreapi</DockerServiceName>
+    <DockerServiceName>backend_project</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
     <None Include="docker-compose.override.yml">

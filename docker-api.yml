@@ -1,0 +1,76 @@
+version: '3.4'
+
+services:
+
+  backend_project:
+    restart: on-failure
+    image: ${DOCKER_REGISTRY-}backendproject
+    build:
+      context: .
+      dockerfile: backend/backend_project/Dockerfile
+    expose:
+      - "8080"
+    volumes:
+      - /tmp:/logs
+    ports:
+      - 8080:8080
+    depends_on:
+      - docker-mysql
+      - redis-master
+      - redis-slave
+      #- redis-sentinel
+    networks:
+      - backend
+
+
+  docker-mysql:
+    restart: always
+    container_name: docker-mysql
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: customerdb
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_HOST: "%"
+    volumes:
+      - db-data-new:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    networks:
+      - backend
+
+
+  redis-master:
+    container_name: redis-master
+    image: redis
+    volumes:
+      - "./data/redis-master:/data"
+    networks:
+      - backend
+
+  redis-slave:
+    container_name: redis-slave
+    image: redis
+    command: redis-server --slaveof redis-master 6379
+    volumes:
+      - "./data/redis-slave:/data"
+    depends_on:
+      - redis-master
+    networks:
+      - backend
+  
+  redis-slave-1:
+    container_name: redis-slave-1
+    image: redis
+    command: redis-server --slaveof redis-master 6379
+    volumes:
+      - "./data/redis-slave:/data"
+    depends_on:
+      - redis-master
+    networks:
+      - backend 
+
+volumes:
+  db-data-new:
+
+networks:
+  backend:
