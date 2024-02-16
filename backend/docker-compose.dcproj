@@ -3,10 +3,10 @@
   <PropertyGroup Label="Globals">
     <ProjectVersion>2.1</ProjectVersion>
     <DockerTargetOS>Linux</DockerTargetOS>
-    <ProjectGuid>6cbdebf0-dc21-41c9-a1d4-8b7fa885b26e</ProjectGuid>
-    <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
-    <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/swagger</DockerServiceUrl>
-    <DockerServiceName>backend_project</DockerServiceName>
+    <ProjectGuid>bec2cc22-721b-4fe4-880c-0726044e4c2b</ProjectGuid>
+	<DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
+	<DockerServiceUrl>{Scheme}://localhost:{ServicePort}/swagger</DockerServiceUrl>
+	<DockerServiceName>backend_project</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
     <None Include="docker-compose.override.yml">

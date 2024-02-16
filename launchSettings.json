@@ -17,11 +17,6 @@
       "serviceActions": {
         "backend_project": "StartDebugging"
       }
-    },
-    "Docker": {
-      "commandName": "Docker",
-      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
-      "publishAllPorts": true
     }
   }
 }

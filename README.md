@@ -1,6 +1,6 @@
 # Estudos em .NET Core + EntityFramework + Docker + MYSQL
 
- - .NET Core 5.0
+ - .NET Core 7.0
  - EntityFramework Core
  - Docker 
  - Docker-compose 3.4
