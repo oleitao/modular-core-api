@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" Sdk="Microsoft.Docker.Sdk">
   <PropertyGroup Label="Globals">
+<<<<<<< HEAD
     <ProjectVersion>2.0</ProjectVersion>
     <DockerTargetOS>Linux</DockerTargetOS>
     <ProjectGuid>b9fd1007-f137-4e2d-b269-3ac3a4192414</ProjectGuid>
     <DockerLaunchBrowser>True</DockerLaunchBrowser>
     <DockerServiceUrl>http://localhost:{ServicePort}</DockerServiceUrl>
     <DockerServiceName>corewebappsimple</DockerServiceName>
+=======
+    <ProjectVersion>2.1</ProjectVersion>
+    <DockerTargetOS>Linux</DockerTargetOS>
+    <ProjectGuid>ad0c736e-7586-4bae-ba8b-727be6d8c48a</ProjectGuid>
+    <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
+    <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/swagger</DockerServiceUrl>
+    <DockerServiceName>modularcoreapi</DockerServiceName>
+>>>>>>> backend
   </PropertyGroup>
   <ItemGroup>
     <None Include="docker-compose.override.yml">
@@ -14,6 +23,9 @@
     </None>
     <None Include="docker-compose.yml" />
     <None Include=".dockerignore" />
+<<<<<<< HEAD
     <None Include="docker-compose.ci.build.yml" />
+=======
+>>>>>>> backend
   </ItemGroup>
 </Project>

@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "backend_project", "backend\backend_project\backend_project.csproj", "{6E35259B-05D6-47C6-9595-5F49A273AEE8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "redis-sentinel", "redis-sentinel", "{0A76F8EB-93B2-48D6-972E-FAD77766BE8C}"
+	ProjectSection(SolutionItems) = preProject
+		backend\redis-sentinel\Dockerfile = backend\redis-sentinel\Dockerfile
+		backend\redis-sentinel\sentinel-entrypoint.sh = backend\redis-sentinel\sentinel-entrypoint.sh
+		backend\redis-sentinel\sentinel.conf = backend\redis-sentinel\sentinel.conf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "spark", "spark", "{9AF3538F-F83C-4D85-85EB-5B40C954BF00}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "mongodb", "mongodb", "{4CFAB62D-004C-43F7-8A9A-679C7683BD7F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "mysql", "mysql", "{0C142DB4-1C25-4710-8757-D767BCC20504}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{6CBDEBF0-DC21-41C9-A1D4-8B7FA885B26E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E35259B-05D6-47C6-9595-5F49A273AEE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E35259B-05D6-47C6-9595-5F49A273AEE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E35259B-05D6-47C6-9595-5F49A273AEE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E35259B-05D6-47C6-9595-5F49A273AEE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CBDEBF0-DC21-41C9-A1D4-8B7FA885B26E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CBDEBF0-DC21-41C9-A1D4-8B7FA885B26E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CBDEBF0-DC21-41C9-A1D4-8B7FA885B26E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CBDEBF0-DC21-41C9-A1D4-8B7FA885B26E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {729455A3-8A81-45B6-A400-BE5C472A0C35}
+	EndGlobalSection
+EndGlobal
