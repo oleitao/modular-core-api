@@ -13,7 +13,7 @@ We will build a full-stack web application that is a basic User Management Appli
 
 <img src="https://github.com/oleitao/modular-core-api/blob/master/frontend/img/react-web.png">
 
-# Local Setup and Run the application (Backend)
+# Local Setup and Run the application
 
 <h2>Create database and table</h2>
 
