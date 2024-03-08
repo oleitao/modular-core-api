@@ -1,35 +1,48 @@
-# Estudos em .NET Core + EntityFramework + Docker + MYSQL
+# .Net 6 + Microsoft SQL Server (Backend) + React JS CRUD (Frontend)
+We will build a full-stack web application that is a basic User Management Application with CRUD features: 
 
- - .NET Core 7.0
- - EntityFramework Core
- - Docker 
- - Docker-compose 3.4
- - Mysql 
+â€¢ Create User 
 
+â€¢ List User 
 
-## Requisitos:
-	- Ter o docker instalado na máquina
+â€¢ Update User 
 
-## Comandos: 
-  Execução:
-    - docker-compose build
-    - docker-compose up
-    
-    util:
-	docker-compose build && docker-compose up
+â€¢ Delete User 
 
-  Uteis:
-- docker network inspect bridge 
-  - Informações sobre a rede dos containers
-  -	**Ver se o container do mysql está para 172.17.0.1, caso não, trocar dentro do docker-compose.yml**
-   
- - docker container ls (Lista os containers)
+â€¢ View User
 
+<img src="https://github.com/oleitao/modular-core-api/blob/master/frontend/img/react-web.png">
 
-## URL's
+# Local Setup and Run the application (Backend)
 
- *Após o container ser iniciado
+<h2>Create database and table</h2>
 
-http://localhost:5001/api/  <---- Documentacao
+```CREATE DATABASE testdb;```
 
-http://localhost:5001/api/Produto <---------- /api/{Nome_Controller} trás os endpoints
+```
+CREATE TABLE users (
+  id              INT           NOT NULL    IDENTITY    PRIMARY KEY,
+  first_name      VARCHAR(100)  NOT NULL,
+  last_name       VARCHAR(100),
+  email           VARCHAR(100)  NOT NULL,
+);
+
+```
+
+<h2> Download or clone the source code from GitHub to the local machine</h2>
+
+<h2> Backend</h2>
+
+You can start the api by running ```dotnet run``` from the command line in the project root folder (where the WebApi.csproj file is located)
+
+OR
+
+You can also start the application in debug mode in Visual Studio by opening the project root folder in Visual Studio and pressing F5 or by selecting Debug -> Start Debugging from the top menu, running in debug mode.
+
+<h2>Frontend</h2>
+
+```npm install```
+
+```npm start```
+
+<h2>From the browser call the endpoint http://localhost:3000/</h2>
