@@ -52,9 +52,11 @@ class ListUserComponent extends Component {
 
                             <thead>
                                 <tr>
-                                    <th> User First Name</th>
-                                    <th> User Last Name</th>
-                                    <th> User Email Id</th>
+                                    <th> Name</th>
+                                    <th> Sex</th>
+                                    <th> Age</th>
+                                    <th> Hobby</th>
+                                    <th> Email</th>
                                     <th> Actions</th>
                                 </tr>
                             </thead>
@@ -63,8 +65,10 @@ class ListUserComponent extends Component {
                                     this.state.users.map(
                                         user => 
                                         <tr key = {user.id}>
-                                             <td> { user.firstName} </td>   
-                                             <td> {user.lastName}</td>
+                                             <td> { user.fullName} </td>                                                
+                                             <td> {user.sex}</td>
+                                             <td> {user.age}</td>
+                                             <td> {user.hobby}</td>
                                              <td> {user.email}</td>
                                              <td>
                                                  <button onClick={ () => this.editUser(user.id)} className="btn btn-info">Update </button>

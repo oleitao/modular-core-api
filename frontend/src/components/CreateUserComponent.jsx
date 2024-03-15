@@ -7,13 +7,18 @@ class CreateUserComponent extends Component {
         this.state = {
             
             id: this.props.match.params.id,
-            firstName: '',
-            lastName: '',
+            fullName: '',
+            sex: '',
+            age: 0,
+            hobby:'',
             email: '',
             errorMessage: ''
         }
-        this.changeFirstNameHandler = this.changeFirstNameHandler.bind(this);
-        this.changeLastNameHandler = this.changeLastNameHandler.bind(this);
+
+        this.changeNameHandler = this.changeNameHandler.bind(this);
+        this.changeSexHandler = this.changeSexHandler.bind(this);
+        this.changeAgeHandler = this.changeAgeHandler.bind(this);
+        this.changeHobbyHandler = this.changeHobbyHandler.bind(this);
         this.saveOrUpdateUser = this.saveOrUpdateUser.bind(this);
     }
 
@@ -25,9 +30,11 @@ class CreateUserComponent extends Component {
             UserService.getUserById(this.state.id).then((res) => {
                 let user = res.data;
                 this.setState({
-                    firstName: user.firstName,
-                    lastName: user.lastName,
-                    email: user.email
+                    fullName: user.fullName,
+                    sex: user.sex,
+                    age: user.age,
+                    hobby: user.hobby,
+                    email: user.email        
                 });
             });
         }
@@ -35,10 +42,16 @@ class CreateUserComponent extends Component {
     
     saveOrUpdateUser = (e) => {
         e.preventDefault();
-        
-        let user = { firstName: this.state.firstName, 
-            lastName: this.state.lastName, email: this.state.email };
-        console.log('user => ' + JSON.stringify(user));
+
+        let user = {          
+            fullName: this.state.fullName, 
+            sex: this.state.sex, 
+            age: this.state.age, 
+            hobby: this.state.hobby, 
+            email: this.state.email 
+        };
+
+        //console.log('user => ' + JSON.stringify(user));
      
         if (this.state.id === '_add') {
             UserService.createUser(user).then(res => {
@@ -50,13 +63,21 @@ class CreateUserComponent extends Component {
             },err => this.setState({errorMessage: err.message}));
         }
     }
-
-    changeFirstNameHandler = (event) => {
-        this.setState({ firstName: event.target.value });
+    
+    changeNameHandler = (event) => {
+        this.setState({ fullName: event.target.value });
     }
 
-    changeLastNameHandler = (event) => {
-        this.setState({ lastName: event.target.value });
+    changeSexHandler = (event) => {
+        this.setState({ sex: event.target.value });
+    }
+
+    changeAgeHandler = (event) => {
+        this.setState({ age: event.target.value });
+    }
+
+    changeHobbyHandler = (event) => {
+        this.setState({ hobby: event.target.value });
     }
 
     changeEmailHandler = (event) => {
@@ -87,14 +108,24 @@ class CreateUserComponent extends Component {
                             <div className="card-body">
                                 <form>
                                     <div className="form-group">
-                                        <label> First Name: </label>
-                                        <input placeholder="First Name" name="firstName" className="form-control"
-                                            value={this.state.firstName} onChange={this.changeFirstNameHandler} />
+                                        <label> Name: </label>
+                                        <input placeholder="Name" name="fullName" className="form-control"
+                                            value={this.state.fullName} onChange={this.changeNameHandler} />
                                     </div>
                                     <div className="form-group">
-                                        <label> Last Name: </label>
-                                        <input placeholder="Last Name" name="lastName" className="form-control"
-                                            value={this.state.lastName} onChange={this.changeLastNameHandler} />
+                                        <label> Sex: </label>
+                                        <input placeholder="Sex" name="sex" className="form-control"
+                                            value={this.state.sex} onChange={this.changeSexHandler} />
+                                    </div>
+                                    <div className="form-group">
+                                        <label> Age: </label>
+                                        <input placeholder="Age" name="age" className="form-control"
+                                            value={this.state.age} onChange={this.changeAgeHandler} />
+                                    </div>
+                                    <div className="form-group">
+                                        <label> Hobby: </label>
+                                        <input placeholder="Hobby" name="hobby" className="form-control"
+                                            value={this.state.hobby} onChange={this.changeHobbyHandler} />
                                     </div>
                                     <div className="form-group">
                                         <label> Email Id: </label>

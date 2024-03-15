@@ -25,15 +25,23 @@ class ViewUserComponent extends Component {
                     <h3 className = "text-center"> View User Details</h3>
                     <div className = "card-body">
                         <div className = "row">
-                            <label> User First Name: </label>
-                            <div> { this.state.user.firstName }</div>
+                            <label> Name: </label>
+                            <div> { this.state.user.fullName }</div>
                         </div>
                         <div className = "row">
-                            <label> User Last Name: </label>
-                            <div> { this.state.user.lastName }</div>
+                            <label> Sex: </label>
+                            <div> { this.state.user.sex }</div>
                         </div>
                         <div className = "row">
-                            <label> User Email ID: </label>
+                            <label> Age: </label>
+                            <div> { this.state.user.age }</div>
+                        </div>
+                        <div className = "row">
+                            <label> Hobby: </label>
+                            <div> { this.state.user.hobby }</div>
+                        </div>
+                        <div className = "row">
+                            <label> Email: </label>
                             <div> { this.state.user.email }</div>
                         </div>
                     </div>

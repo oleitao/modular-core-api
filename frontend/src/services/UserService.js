@@ -9,6 +9,7 @@ class UserService {
     }
 
     createUser(user){
+        console.log('user => ' + JSON.stringify(user));
         return axios.post(USER_API_BASE_URL, user);
     }
 
