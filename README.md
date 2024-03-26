@@ -45,4 +45,4 @@ You can also start the application in debug mode in Visual Studio by opening the
 
 ```npm start```
 
-<h2>From the browser call the endpoint http://localhost:9080/</h2>
+<h2>From the browser call the endpoint http://localhost:9080/api/v1/</h2>
